@@ -1,0 +1,58 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    // 指定 TypeScript 源文件目录
+    "rootDir": "./src",
+    // 设置 outDir 和 rootDir 后，执行 tsc命令会直接将编译的结果输出 ./dist目录下。注意：使用 tsc 命令时后面不要写具体的 ts文件名。
+    "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    // 让编译后的代码能够使用 ES6 模块语法 (import/export)。
+    "module": "es2015",
+    // 将代码编译成 ES6 (ES2015) 版本的 JavaScript
+    "target": "es6",
+    "types": [],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    // 启用所有严格的类型检查，这是 TypeScript 的核心
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    // 跳过 node_modules/ 中所有 .d.ts 文件（即第三方库的类型声明文件）的类型检查，加快编译速度。
+    "skipLibCheck": true,
+
+    // 让我们能够顺利的用 import 语法导入 CommonJS 格式的 npm 包。
+    "esModuleInterop": true,
+    // 它强制要求你在 import 语句中写的文件路径，必须和实际文件系统中的大小写完全一致。避免跨系统问题。
+    "forceConsistentCasingInFileNames": true,
+
+    // 当 ts 出现语法错误时，不编译生成 js 文件
+    "noEmitOnError": true
+  }
+}
